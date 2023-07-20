@@ -6,6 +6,7 @@ use App\Models\Activity;
 use App\Models\Complete;
 use App\Models\Routine;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Carbon\CarbonTimeZone;
 
@@ -19,7 +20,7 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $routine = Routine::first();
+        $routine = Routine::where('user_id', Auth::id())->first();
 
         if ($routine) {
             $startdate = Carbon::createFromFormat('Y-m-d', $routine->start)->startOfDay();
@@ -33,7 +34,7 @@ class DashboardController extends Controller
                 ->exists();
 
             if ($isExists) {
-                $rows = Routine::with(['activities', 'complete'])->limit(10)->get();
+                $rows = Routine::with(['activities', 'complete'])->where('user_id', Auth::id())->limit(10)->get();
 
                 foreach ($rows as $row) {
                     $createdAt = Carbon::parse($row->created_at);
@@ -83,14 +84,14 @@ class DashboardController extends Controller
 
                 ]);
             } else {
-                $rows = Routine::with(['activities', 'complete'])->limit(10)->get();
+                $rows = Routine::with(['activities', 'complete'])->where('user_id', Auth::id())->limit(10)->get();
                 return view('dashboard.index', [
                     'routine' => $rows,
                 ]);
             }
             // Lakukan tindakan yang diinginkan dengan $routines (data dari tanggal hari ini hingga $endDate)
         } else {
-            $rows = Routine::with(['activities', 'complete'])->limit(10)->get();
+            $rows = Routine::with(['activities', 'complete'])->where('user_id', Auth::id())->limit(10)->get();
             return view('dashboard.index', [
                 'routine' => $rows,
             ]);
