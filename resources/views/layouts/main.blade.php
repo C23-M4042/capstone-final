@@ -14,6 +14,7 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+      <meta name="theme-color" content="#5e63aa"/>
       
       <!-- style css -->
       <link rel="stylesheet" href="styles/style.css">
@@ -26,6 +27,7 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+      <link rel="manifest" href="./app.webmanifest">
    </head>
    <!-- body -->
    <body class="main-layout" style="background-color: #e7e8f5 !important;">

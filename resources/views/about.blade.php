@@ -38,7 +38,7 @@
                 
                 <div class="text-center p-3">
                     <h5 class="mb-0">Ramadhan Abelio Nusa Putra </h5>
-                    <small>Backend Developer</small>
+                    <small style="color: white;">Backend Developer</small>
                 </div>
                 <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;  margin-right: 25px;">
                  <ul class="social_icon">
@@ -56,7 +56,7 @@
                
                <div class="text-center p-3">
                    <h5 class="mb-0">Donius Tamo Ama </h5>
-                   <small>Frontend Developer</small>
+                   <small style="color: white;">Frontend Developer</small>
                </div>
                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;  margin-right: 25px;">
                 <ul class="social_icon">
@@ -74,7 +74,7 @@
             
             <div class="text-center p-3">
                 <h5 class="mb-0">Dian Nurcahya Ningrum</h5>
-                <small>Frontend Developer</small>
+                <small style="color: white;">Frontend Developer</small>
             </div>
             <div class="position-relative d-flex justify-content-center" style="margin-top: -23px; margin-right: 25px;">
              <ul class="social_icon">
@@ -92,7 +92,7 @@
          
          <div class="text-center p-3">
              <h5 class="mb-0"> Haniva Naina Zein </h5>
-             <small>Designation</small>
+             <small style="color: white;">Designation</small>
          </div>
          <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;  margin-right: 25px;">
           <ul class="social_icon">
