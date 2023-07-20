@@ -27,7 +27,9 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
-      <link rel="manifest" href="./app.webmanifest">
+      <meta name="theme-color" content="#6777ef"/>
+      <link rel="apple-touch-icon" href="{{ asset('images/logo.png') }}">
+      <link rel="manifest" href="{{ asset('/manifest.json') }}">
    </head>
    <!-- body -->
    <body class="main-layout" style="background-color: #e7e8f5 !important;">
@@ -53,6 +55,14 @@
          </div>
       </footer>
       <!-- end footer -->
+      <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
    </body>
 </html>
 
